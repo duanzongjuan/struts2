@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+   <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant> <!-- 访问静态方法时必须加上 -->
+    <package name="ognl" extends="struts-default">
+	    <action name="ognl" class="com.juan.struts.ognl.OgnlAction">
+	    	<result>/ognl.jsp</result>
+	    </action>
+	    <action name="test" class="com.juan.struts.ognl.TestAction">
+	    	<result type="chain">ognl</result>
+	    </action> 
+	     
+	     
+    </package>
+</struts>

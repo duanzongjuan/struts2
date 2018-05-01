@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <package name="user" namespace="/user" extends="struts-default">
+    	
+	    <action name="user" class="com.juan.struts.user.action.UserAction">
+	    <!-- 注：${}:作用是用于在配置文件中从Value stack(值栈)中取值。
+	    例如：${r} 表示从Value stack(值栈)中取rAction的(成员属性)的值。注意这个成员属性必需存在
+	    注：此处的${}不是el表达式。 -->
+	    
+	    	<result>${r}</result>
+	    </action>	    
+    </package>
+</struts>
